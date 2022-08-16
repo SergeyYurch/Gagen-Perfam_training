@@ -1,0 +1,49 @@
+.footer {
+  padding-top: 37px;
+  padding-bottom: 37px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.7em;
+  line-height: 1.8;
+  color: $color-gray;
+  width: 100%;
+  text-align: center;
+  nav {
+    padding-bottom: 25px;
+    ul {
+      @include scr_phone{
+        flex-wrap: wrap;
+        font-size: 1.5em;
+      }
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      >li{
+          &::after {
+          content: '\007C';
+          margin: 0 5px;
+          }
+          &:last-child{
+            &::after {
+            content: '';
+            }
+          }
+          a {
+            color: $color-gray;
+          }
+      }
+    }
+  }
+  .footer__contact {
+    display: flex;
+    justify-content: center;
+    >li:not(:last-child)
+      {
+        &::after {
+          content: '\007C';
+          margin: 0 5px;
+        }
+      }
+    }
+
+}
+

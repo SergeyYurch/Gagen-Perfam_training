@@ -1,0 +1,34 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  @include scr_tablet{
+    font-size: 14px;
+  }
+  font-family: HelveticaNeue Light, Arial;
+  color: $color-body-gray;
+  line-height: 2;
+  background: $color-light-gray url("../img/main_bg.png") center top no-repeat;
+  font-size: 16px;
+  ul, li {
+    list-style: none;
+  }
+  .container {
+    max-width: 1103px;
+    margin: 0 auto;
+    padding: 0 15px;
+    a{
+      text-decoration: none;
+      &:hover {
+        color: $color-violet;
+      }
+
+    }
+  }
+}
+
+
+

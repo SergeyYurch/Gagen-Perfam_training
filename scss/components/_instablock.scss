@@ -1,0 +1,44 @@
+.instablock {
+  margin-top: 37px;
+  padding: 20px;
+  width: 100%;
+  background-color: $color-white;
+  box-shadow: 0 0 7px $color-black ;
+  .instablock__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $color-gray;
+    font-size: 1.13em;
+    padding-bottom: 12px;
+    line-height: 1;
+  }
+  .instablock__img {
+    display: flex;
+    justify-content: space-between;
+    @include scr_iphone{
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    @include scr_phone{
+      flex-direction: column;
+      justify-content: center;
+    }
+
+  div {
+    display: flex;
+    padding: 5px;
+    @include scr_iphone{
+      width: 50%;
+    }
+    @include scr_phone{
+      width: 100%;
+    }
+  }
+  img {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+ }
+}
+

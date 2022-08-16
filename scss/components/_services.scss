@@ -1,0 +1,84 @@
+.services {
+  @include scr_iphone {
+    flex-direction: column;
+  }
+  margin-top: 40px;
+  width: 100%;
+  box-shadow: 0 0 7px $color-black;
+  display: flex;
+  background-color: $color-white;
+  color: $color-services-gray;
+  font-size: 0.75em;
+  line-height: 1.7;
+  padding: 1em;
+
+  a {
+    font-size: 0.75em;
+    line-height: 1.7;
+    color: $color-violet;
+    @include scr_tablet {
+      font-size: 1em;
+    }
+    @include scr_iphone {
+      font-size: 1.2em;
+    }
+    @include scr_phone {
+      font-size: 1.5em;
+    }
+  }
+  img {
+    max-width: 100%;
+  }
+  div {
+    flex: 1 1 33.3%;
+    h2 {
+      font-size: 1.13em;
+      color: $color-gray;
+      padding-bottom: 13px;
+    }
+  }
+  .services__hair-coloring {
+    flex: 1;
+  }
+  .services__hair-extensions {
+    flex: 1;
+  }
+  .services__beauty-blog {
+    flex: 1;
+    h3 {
+      color: $color-violet;
+      font-weight: 400;
+      font-size: 0.8em;
+      @include scr_iphone {
+        font-size: 1.2em;
+      }
+    }
+    p {
+      padding-bottom: 12px;
+    }
+  }
+}
+
+.services__content {
+  display: flex;
+  margin-bottom: 20px;
+  padding-right: 1em;
+}
+.services__text {
+  flex: 2;
+  p{
+    &:nth-child(1) {
+    padding-bottom: 20px;
+    a{
+      line-height: 20px;
+      }
+    }
+  }
+}
+.services__content_img {
+  flex: 1;
+  width: 33%;
+  padding-right: 1.25em;
+}
+
+

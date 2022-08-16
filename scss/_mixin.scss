@@ -1,0 +1,66 @@
+@mixin scr_tablet {
+  @media (max-width: 960px){
+    @content;
+  }
+}
+
+@mixin scr_iphone {
+  @media (max-width: 767px){
+    @content;
+  }
+}
+
+@mixin scr_phone {
+  @media (max-width: 468px){
+    @content;
+  }
+}
+
+@mixin gamburger_show {
+  .header__menu {
+    visibility: hidden;
+    flex-direction: column;
+    position: absolute;
+    right: 20px;
+    top: 30px;
+    background-color: $color-light-gray;
+    opacity: 0.9;
+    border-radius: 10px;
+    font-size: 1.5em;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+  }
+  .header__btn {
+    opacity: 1;
+    display: block;
+    > span{
+      &, &::before, &::after {
+      display: block;
+      position: absolute;
+      width: 20px;
+      height: 2px;
+      background-color: $color-bg-gray;
+      transition-duration: .25s;
+      }
+    }
+
+  }
+}
+
+
+@mixin banner_link_style {
+  font-family: Georgia, serif;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  color: $color-gray;
+  line-height: 2;
+}
+
+@mixin banner_para_style {
+  font-family: Georgia, serif;
+  font-size: 0.94em;
+  color: $color-banner-gray;
+  font-style: italic;
+  padding-top: 47px;
+  line-height: 1.4;
+}

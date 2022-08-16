@@ -1,0 +1,76 @@
+.banner {
+  @include scr_iphone {
+    flex-direction: column;
+  }
+  @include scr_phone {
+    flex-direction: column;
+  }
+  display: flex;
+  text-align: center;
+  background-color: $color-white;
+  box-shadow: 0 0 7px $color-black;
+  a {
+    @include banner_link_style
+  }
+  div {
+    img {
+      width: 100%;
+    }
+  }
+  .banner__div {
+    @include scr_iphone {
+      width: 100%;
+    }
+    @include scr_phone {
+      width: 100%;
+    }
+    width:  50%;
+    .banner-text {
+      padding: 10px;
+      p{
+        &:nth-child(1) {
+          font-size: 1.13em;
+          color: $color-gray;
+          padding-top: 65px;
+        }
+        &:nth-child(2) {
+          font-family: ShelleyScriptLTW01, Arial;
+          font-size: 2.7em;
+          color: $color-black;
+          line-height: 35px;
+        }
+        &:nth-child(3) {
+          @include banner_para_style
+        }
+        &:nth-child(5) {
+          @include banner_para_style
+        }
+      }
+    }
+    .banner__nav {
+      margin: 47px 10px 10px 10px;
+      ul {
+        display: flex;
+        justify-content: space-evenly;
+        @include scr_phone {
+          flex-direction: column;
+          align-items: center;
+        }
+        li {
+          border-radius: 5px;
+          background-color: rgba(241, 239, 236, 0.302);
+          width: 145px;
+          height: 33px;
+          &:hover {
+            background-color: rgba(241, 239, 236, 0.802);
+          }
+          a {
+            color: $color-violet;
+            line-height: 33px;
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+  }
+}
